@@ -1,0 +1,6 @@
+Flask==2.1.2
+flask[async]
+Flask-Cors==3.0.10
+PyJWT==2.3.0
+openai==0.10.2
+pymongo==4.0.1
