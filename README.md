@@ -1,6 +1,6 @@
 # chatgpt-flask-react-toyapp
 
-This is a really simple toy app using Flask and React to interact with OpenAI.  
+This is a really simple toy app using Flask (plus MongoDB) and React to interact with OpenAI.  
 This project was created mostly for myself to keep learning React.js but surely will serve as a good "template" for someone else.
 
 
@@ -25,7 +25,32 @@ Once that's completed, simply build and _up_ the Docker container.
 docker-compose up --build
 ```
 
-## Endpoints
+This docker-compose contains 3 services:
+
+* `mongo`, as the DB. It'll store the _conversations_ and user data.
+* `flask`, as the BE. It'll provide a series of endpoints (see below).
+* `react`, as the FE. It'll provide a UI to interact with the BE.
+
+## Frontend
+
+The FE is really simple:
+
+* A screen that allows to either Login or Register
+* A "chat" interface to interact with ChatGPT. Also contains an Export button.
+
+### Login
+
+![](media/login.png)
+
+### Register
+
+![](media/register.png)
+
+### Chat
+
+![](media/chat.png)
+
+## Backend - Endpoints
 
 ### `/register/...`: `POST`
 
